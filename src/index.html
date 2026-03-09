@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERIDIAN - Premium Purchase Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com 'unsafe-inline'; style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data:;">
+</head>
+
+<body>
+    <div class="leaf-pattern"></div>
+    <div id="app">
+        <aside class="sidebar">
+            <div id="liveClock" class="clock-container">
+                <div class="clock-time" id="clockTime">00:00:00</div>
+                <div class="clock-date" id="clockDate">Mon, 1 Jan</div>
+            </div>
+            <div class="logo">VERIDIAN</div>
+            <nav>
+                <div class="nav-item active" data-view="dashboard">
+                    <i class="fas fa-chart-line"></i> Dashboard
+                </div>
+                <div class="nav-item" data-view="bills">
+                    <i class="fas fa-file-invoice-dollar"></i> Bills
+                </div>
+                <div class="nav-item" data-view="distributors">
+                    <i class="fas fa-truck"></i> Distributors
+                </div>
+                <div class="nav-item" data-view="reports">
+                    <i class="fas fa-file-export"></i> Reports
+                </div>
+            </nav>
+            <div class="auto-sync-active">
+                <i class="fas fa-shield-alt"></i> Auto-Sync Active
+            </div>
+        </aside>
+
+        <main class="main-content" id="mainView">
+            <!-- Dynamic content injected here -->
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="modalContainer"></div>
+
+    <!-- Scripts -->
+    <script src="../node_modules/jspdf/dist/jspdf.umd.min.js"></script>
+    <script src="../node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.min.js"></script>
+    <script src="renderer.js"></script>
+</body>
+
+</html>

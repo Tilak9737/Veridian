@@ -1,0 +1,40 @@
+{
+  "name": "veridian",
+  "version": "1.0.0",
+  "description": "Veridian - Premium Offline Bill Tracking and Business Analytics",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": [],
+  "author": "Shree Shankar Vijay Supermarket",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "better-sqlite3": "^12.6.2",
+    "chart.js": "^4.5.1",
+    "jspdf": "^4.2.0",
+    "jspdf-autotable": "^5.0.7"
+  },
+  "devDependencies": {
+    "electron": "^40.6.1",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.veridian.offbill",
+    "productName": "Veridian",
+    "files": [
+      "main.js",
+      "src/**/*",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "portable"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  }
+}
